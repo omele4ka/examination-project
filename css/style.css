@@ -32,7 +32,7 @@ body {
     display: flex;
     flex-direction: row;
     margin-top: 62px;
-    margin-left: 219px;
+    margin-left: 190px;
 }
 
 .header-menu {
@@ -59,35 +59,44 @@ body {
 }
 
 .menu-item-link:active {
-    color: #ccc;
+    color: #B0C4DE;
 }
 
 .purchase {
     margin-left: 63px;
     margin-top: 15px;
+    margin-right: 373px;
     display: flex;
     flex-direction: row;
 }
 
 .cart {
     display: block;
-    width: 18px;
-    height: 24px;
     text-decoration: none;
-    background-image: url(../img/icon-cart.png);
-    background-size: cover;
-    background-position: center;
-    margin-right: 28px;
+    margin-right: 30px;
 }
 
+.cart-icon {
+    display: block;
+    fill: #ffffff;
+}
 .search {
     display: block;
-    width: 24px;
-    height: 24px;
-    background-image: url(../img/icon-search.png);
-    background-color: #393c3e;
-    background-size: cover;
-    border: transparent;
+    text-decoration: none;
+}
+
+.search-icon {
+    fill: #ffffff;
+}
+
+.cart-icon:hover,
+.search-icon:hover {
+    fill: #c7b299;
+}
+
+.cart-icon:active,
+.search-icon:active {
+    fill: #B0C4DE;
 }
 
 .main-header {
@@ -129,7 +138,7 @@ body {
 }
 
 .get-started-btn {
-    display: block;
+    display: flex;
     text-decoration: none;
     width: 170px;
     min-height: 53px;
@@ -158,7 +167,7 @@ body {
     font-weight: 600;
     line-height: 23px;
     text-transform: uppercase;
-    padding-top: 15px;
+    margin: auto;
 }
 
 .arrow {
@@ -201,27 +210,26 @@ body {
 .slides {
     display: flex;
     position: absolute;
-    margin-top: 855px;
+    margin-top: 835px;
 }
 
 .dots {
     display: block;
+    width: 13px;
+    height: 13px;
     text-decoration: none;
-    padding-right: 10px;
+    padding-right: 15px;
+    background-image: url(../img/dot.png);
+    background-repeat: no-repeat;
+    background-size: 13px 13px;
+    
 }
 
-.dot {
-    display: block;
-    fill: #949392;
-    opacity: 0.5;
-}
-
-.dot:hover {
+.dots:hover {
+    width: 15px;
+    height: 15px;
     background-image: url(../img/dot-selected.png) no-repeat;
-    background-color: #fff;
-    background-size: cover;
-    background-position: center;
-    border-radius: 50%;
+    background-size: 15px 15px;
 }
 
 .services {
@@ -328,10 +336,72 @@ body {
     min-height: 482px;
     align-self: center;
     background-color: #fbfaf8;
-    background-image: url(../img/browser-center.png),
-                    url(../img/browser-left.png),
-                    url(../img/browser-right.png);
+    background-image: url(../img/browser-center.png), url(../img/browser-left.png), url(../img/browser-right.png);
     background-size: 770px 482px, 700px 400px, 700px 400px;
     background-repeat: no-repeat;
     background-position: bottom center, bottom left, bottom right;
+}
+
+.ads {
+    width: 100%;
+    min-height: 153px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: #f4f5f8;
+    background-image: linear-gradient(to right, #211b19 0%, #4e3427 100%);
+}
+
+.ad {
+    margin-top: 50px;
+    margin-left: 376px;
+}
+
+.ad-header {
+    display: block;
+    color: #ffffff;
+    font-family: 'Raleway';
+    font-size: 28px;
+    font-weight: 400;
+    padding: 0;
+}
+
+.ad-txt {
+    display: block;
+    color: #615855;
+    font-family: 'Montserrat';
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.purchase-now-btn {
+    display: flex;
+    text-decoration: none;
+    text-align: center;
+    width: 173px;
+    height: 53px;
+    box-shadow: inset 0 -3px 0 #736357;
+    border-radius: 3px;
+    background-color: #998675;
+    margin-top: 50px;
+    margin-right: 374px;
+}
+
+.purchase-now-btn:hover {
+    background-color: #d2c1ad;
+}
+
+.purchase-now-btn:active {
+    background-color: #B0C4DE;
+}
+
+.purchase-now-btn-txt {
+    display: block;
+    color: #ffffff;
+    font-family: 'Raleway';
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 23px;
+    text-transform: uppercase;
+    margin: auto;
 }
