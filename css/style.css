@@ -1,3 +1,73 @@
+@font-face {
+    font-family: 'montserrat';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Montserrat'),
+        url('../fonts/montserrat/montserrat.woff2') format('woff2'),
+        url('../fonts/montserrat/montserrat.woff') format('woff'),
+        url('../fonts/montserrat/montserrat.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'raleway-regular';
+    font-style: normal;
+    font-weight: 400;
+    src: local ('Raleway'),
+        url('../fonts/raleway/raleway-regular.woff2') format('woff2'),
+        url('../fonts/raleway/raleway-regular.woff') format('woff'),
+        url('../fonts/raleway/raleway-regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'raleway-medium';
+    font-style: normal;
+    font-weight: 500;
+    src: local ('Raleway - Medium'),
+        url('../fonts/raleway/raleway-medium.woff2') format('woff2'),
+        url('../fonts/raleway/raleway-medium.woff') format('woff'),
+        url('../fonts/raleway/raleway-medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'raleway-semibold';
+    font-style: normal;
+    font-weight: 600;
+    src: local ('Raleway - Semibold'),
+        url('../fonts/raleway/raleway-semibold.woff2') format('woff2'),
+        url('../fonts/raleway/raleway-semibold.woff') format('woff'),
+        url('../fonts/raleway/raleway-semibold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'raleway-bold';
+    font-style: normal;
+    font-weight: 700;
+    src: local ('Raleway - Bold'),
+        url('../fonts/raleway/raleway-bold.woff2') format('woff2'),
+        url('../fonts/raleway/raleway-bold.woff') format('woff'),
+        url('../fonts/raleway/raleway-bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'raleway-extrabold';
+    font-style: normal;
+    font-weight: 800;
+    src: local ('Raleway - ExtraBold'),
+        url('../fonts/raleway/raleway-extrabold.woff2') format('woff2'),
+        url('../fonts/raleway/raleway-extrabold.woff') format('woff'),
+        url('../fonts/raleway/raleway-extrabold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local ('Roboto'),
+        url('../fonts/roboto/roboto.woff2') format('woff2'),
+        url('../fonts/roboto/roboto.woff') format('woff'),
+        url('../fonts/roboto/roboto.ttf') format('truetype');
+}
+
 body {
     margin: 0 auto;
     width: 1920px;
@@ -17,15 +87,44 @@ body {
     display: flex;
 }
 
-.logo {
+.logo-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 181px;
+    text-decoration: none;
+    background-color: transparent;
     margin-left: 376px;
     margin-top: 40px;
 }
 
-.logo-link {
-    display: block;
-    float: left;
-    text-decoration: none;
+.logo-svg {
+    fill: #fff;
+}
+
+.logo-txt {
+    font-family: 'raleway-regular', 'Verdana', sans-serif;
+    color: #ffffff;
+    font-size: 34px;
+    font-weight: 400;
+    text-align: right;
+}
+
+.logo-link:hover .logo-svg {
+    fill: #998675;
+    stroke: #fff;
+}
+
+.logo-link:hover .logo-txt {
+    color: #998675;
+}
+
+.logo-link:active .logo-svg {
+    fill: #B0C4DE;
+}
+
+.logo-link:active .logo-txt {
+    color: #B0C4DE;
 }
 
 .menu {
@@ -49,7 +148,7 @@ body {
     text-decoration: none;
     display: block;
     color: #ffffff;
-    font-family: 'Montserrat';
+    font-family: 'montserrat', 'Verdana', sans-serif;
     font-size: 14px;
     font-weight: 300;
 }
@@ -77,25 +176,34 @@ body {
 }
 
 .cart-icon {
-    display: block;
     fill: #ffffff;
 }
+
 .search {
-    display: block;
-    text-decoration: none;
+    width: 24px;
+    height: 24px;
+    outline: none;
+    color: #ffffff;
+    font-family: 'montserrat', 'Verdana', sans-serif;
+    background-image: url(../img/icon-search.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: transparent;
+    background-color: transparent;
+    background-position: right;
 }
 
-.search-icon {
-    fill: #ffffff;
+.search:focus {
+    width: 300px;
+    transition: width 1s ease-out;
+    background-position: right;
 }
 
-.cart-icon:hover,
-.search-icon:hover {
+.cart-icon:hover {
     fill: #c7b299;
 }
 
-.cart-icon:active,
-.search-icon:active {
+.cart-icon:active {
     fill: #B0C4DE;
 }
 
@@ -109,9 +217,9 @@ body {
 .H2 {
     display: block;
     color: #ffffff;
-    font-family: 'Raleway';
+    font-family: 'raleway-medium', 'Verdana', sans-serif;
     font-size: 36px;
-    font-weight: 500;
+    font-weight: 400;
     margin-top: 300px;
     text-align: center;
 }
@@ -119,7 +227,7 @@ body {
 .H1 {
     display: block;
     color: #ffffff;
-    font-family: 'Raleway';
+    font-family: 'raleway-extrabold', 'Verdana', sans-serif;
     font-size: 52px;
     font-weight: 600;
     text-align: center;
@@ -130,7 +238,7 @@ body {
     display: block;
     text-align: center;
     color: #ffffff;
-    font-family: 'Montserrat';
+    font-family: 'montserrat', 'Verdana', sans-serif;
     font-size: 16px;
     font-weight: 300;
     line-height: 24px;
@@ -162,9 +270,9 @@ body {
 .btn-txt {
     display: block;
     color: #ffffff;
-    font-family: 'Raleway';
+    font-family: 'raleway-extrabold', 'Verdana', sans-serif;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 400;
     line-height: 23px;
     text-transform: uppercase;
     margin: auto;
@@ -222,7 +330,6 @@ body {
     background-image: url(../img/dot.png);
     background-repeat: no-repeat;
     background-size: 13px 13px;
-    
 }
 
 .dots:hover {
@@ -240,24 +347,33 @@ body {
     background-color: #ffffff;
 }
 
-.design,
-.development,
-.customization,
-.marketing {
-    margin-top: 80px;
+.link-services {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     flex-direction: column;
     width: 266px;
+    margin-top: 80px;
     margin-bottom: 80px;
+    text-decoration: none;
+    text-align: center;
 }
 
-.design {
+.link-services:first-child {
     margin-left: 376px;
 }
 
-.marketing {
+.link-services:last-child {
     margin-right: 376px;
+}
+
+.link-services:after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 2px;
+    background-color: #f1eee9;
+    align-self: center;
 }
 
 .service-icon {
@@ -276,7 +392,7 @@ body {
     margin-top: 30px;
 }
 
-.service-header:hover {
+.link-services:hover .service-header {
     color: #c7b299;
 }
 
@@ -284,20 +400,18 @@ body {
     display: block;
     text-align: center;
     color: #8c8c8c;
-    font-family: 'Montserrat';
+    font-family: 'montserrat', 'Verdana', sans-serif;
     font-size: 14px;
     font-weight: 300;
     line-height: 24px;
 }
 
-.line {
-    fill: rgb(241, 238, 233);
-    align-self: center;
+.link-services:hover .service-icon {
+    fill: #c7b299;
 }
 
-.service-icon:hover,
-.line:hover {
-    fill: #c7b299;
+.link-services:hover:after {
+    background-color: #c7b299;
 }
 
 .realization {
@@ -311,9 +425,9 @@ body {
 .realization-header {
     display: block;
     color: #555555;
-    font-family: 'Raleway';
+    font-family: 'raleway-extrabold', 'Verdana', sans-serif;
     font-size: 30px;
-    font-weight: 600;
+    font-weight: 400;
     text-align: center;
     margin-top: 80px;
 }
@@ -322,7 +436,7 @@ body {
     display: block;
     text-align: center;
     color: #8c8c8c;
-    font-family: 'Montserrat';
+    font-family: 'montserrat', 'Verdana', sans-serif;
     font-size: 16px;
     font-weight: 300;
     line-height: 28px;
@@ -360,7 +474,7 @@ body {
 .ad-header {
     display: block;
     color: #ffffff;
-    font-family: 'Raleway';
+    font-family: 'raleway-regular', 'Verdana', sans-serif;
     font-size: 28px;
     font-weight: 400;
     padding: 0;
@@ -369,7 +483,7 @@ body {
 .ad-txt {
     display: block;
     color: #615855;
-    font-family: 'Montserrat';
+    font-family: 'montserrat', 'Verdana', sans-serif;
     font-size: 18px;
     font-weight: 300;
 }
@@ -398,7 +512,7 @@ body {
 .purchase-now-btn-txt {
     display: block;
     color: #ffffff;
-    font-family: 'Raleway';
+    font-family: 'raleway-extrabold', 'Verdana', sans-serif;
     font-size: 14px;
     font-weight: 600;
     line-height: 23px;
