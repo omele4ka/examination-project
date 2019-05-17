@@ -825,6 +825,7 @@ body {
     background-image: linear-gradient(to right, #211b19 0%, #4e3427 100%);
     display: flex;
     justify-content: center;
+    min-height: 300px;
 }
 
 .statistic-item {
@@ -832,6 +833,15 @@ body {
     justify-content: center;
     flex-direction: column;
     margin: 0 auto;
+}
+
+.statistic-item:after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: #ffffff;
+    align-self: center;
 }
 
 .statistic-icon {
@@ -861,4 +871,5 @@ body {
     text-transform: uppercase;
     align-self: center;
     margin-top: 21px;
+    margin-bottom: 30px;
 }
