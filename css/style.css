@@ -745,6 +745,7 @@ body {
     background-size: 70px 70px, 100px 100px;
     background-position: center, center;
     align-self: center;
+    outline: none;
 }
 
 .video-header {
@@ -923,11 +924,12 @@ body {
 .recent-post-preview:hover .recent-post-img {
     filter: brightness(40%);
 }
+
 .recent-post-description {
     padding-bottom: 33px;
 }
 
-.recent-post-preview:hover .recent-post-description{
+.recent-post-preview:hover .recent-post-description {
     background-color: #362f2d;
 }
 
@@ -1051,4 +1053,41 @@ body {
 
 .next-btn:active {
     fill: red;
+}
+
+.logos {
+    width: 100%;
+    min-height: 489px;
+    background-color: #191919;
+    background-image: url(../img/prefooter-img.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    margin: 0 auto;
+}
+
+.partner-logo {
+    text-decoration: none;
+    display: block;
+}
+
+.partner-logo-1 {
+    margin-left: 406px;
+    margin-top: 181px;
+    margin-right: 90px;
+}
+
+.partner-logo-2 {
+    margin-top: 140px;
+    margin-right: 90px;
+}
+
+.partner-logo-3 {
+    margin-top: 181px;
+    margin-right: 90px;
+}
+
+.partner-logo-4 {
+    margin-top: 163px;
 }
